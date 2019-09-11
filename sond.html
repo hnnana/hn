@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    
+</head>
+<body>
+    <audio src="hqs.mp3" muted autoplay loop id="myaudio" style="display: none"></audio>
+    <img src="aa.jpg" alt="" srcset="">
+    <script>
+        var audio = document.getElementById('myaudio');
+        var t1 = 3e3;
+        var t2 = 2500;
+        var play = false;
+        function run() {
+            if (play) {
+                return false;
+            }
+            audio.currentTime = 0;
+            audio.volume = false;
+            audio.muted = false;
+            play = true;
+            setTimeout(function() {
+                play = false;
+                audio.muted = true;
+            }, t2);
+        }
+        sestInterval(function() {
+            run();
+        },t1);
+    </script>
+</body>
+</html>
