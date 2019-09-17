@@ -7,19 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="targetButton">事件是？</button>
-    <script>
-        const button = document.getElementById("targetButton");
-        const clickEvent = (function() {
-            if('ontouchstart' in document.documentElement === true)
-            return 'touchstart';
-            else
-            return 'click';
-        })();
-        button.addEventListener(clickEvent, e=>{
-            // console.log(clickEvent + ' things happend!');
-            alert(clickEvent + ' things happend!');
-        })
-    </script>
+    <button id="targetButton">alert event</button>
+    <script src="21.js"></script>
 </body>
 </html>
